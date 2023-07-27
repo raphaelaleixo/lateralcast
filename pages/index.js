@@ -1,10 +1,11 @@
 import { Inter } from "next/font/google";
 import { getHomeData } from "@/lib/api";
 import Head from "next/head";
+import Image from "next/image";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "900"],
+  weight: ["variable"],
   variable: "--inter-font",
 });
 
@@ -72,8 +73,35 @@ export default function Home({ home, articles }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#242B53" />
         <meta name="msapplication-TileColor" content="#242B53" />
       </Head>
-      <main className={`${inter.variable}`}>
-        
+      <main
+        className={`${inter.variable} bg-slate-50 h-full w-full rounded-2xl font-['Inter'] max-w-xl max-h-full overflow-hidden flex flex-col border-white border-2`}
+      >
+        <header className="p-8 py-12 border-b-slate-400 border-b-2">
+          <Image
+            src="/logo.png"
+            alt="lateralcast logo"
+            width="256"
+            height="35"
+            className="h-auto"
+          />
+          <h2 className="uppercase font-black text-xl leading-none mt-1">
+            The party game
+          </h2>
+          <p className="text-sm font-medium my-4">
+            A party game about interesting quiz questions, and even more
+            interesting answers, based on the podcast hosted by Tom Scott.
+          </p>
+          <button className="bg-black text-white text-sm py-4 px-8 rounded-full font-bold">
+            How to play
+          </button>
+        </header>
+        <div className="overflow-y-auto">
+          <div className="px-8 py-6 bg-orange-100 my-0.5">
+            <h3 className="font-bold text-sm truncate">
+              The elevator where you're "born again".
+            </h3>
+          </div>
+        </div>
       </main>
     </>
   );
