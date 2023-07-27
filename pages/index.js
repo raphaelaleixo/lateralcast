@@ -2,16 +2,16 @@ import { Inter } from "next/font/google";
 import { getHomeData } from "@/lib/api";
 import Head from "next/head";
 
-const poppins = Inter({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400, 500, 700"],
-  variable: "--poppins-font",
+  weight: ["400", "500", "900"],
+  variable: "--inter-font",
 });
 
-export async function getStaticProps() {
-  const response = await getHomeData();
-  return { props: { home: response?.home, articles: response?.allArticles } };
-}
+// export async function getStaticProps() {
+//   const response = await getHomeData();
+//   return { props: { home: response?.home, articles: response?.allArticles } };
+// }
 
 export default function Home({ home, articles }) {
   return (
@@ -72,7 +72,7 @@ export default function Home({ home, articles }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#242B53" />
         <meta name="msapplication-TileColor" content="#242B53" />
       </Head>
-      <main className={`${poppins.variable} ${roboto.variable}`}>
+      <main className={`${inter.variable}`}>
         
       </main>
     </>
