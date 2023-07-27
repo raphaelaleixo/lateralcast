@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
-import { getHomeData } from "@/lib/api";
+import { getAllQuestions } from "@/lib/api";
 import Head from "next/head";
 import Image from "next/image";
+import Button from "@/components/Button";
+import QuestionLink from "@/components/QuestionLink";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -9,12 +11,12 @@ const inter = Inter({
   variable: "--inter-font",
 });
 
-// export async function getStaticProps() {
-//   const response = await getHomeData();
-//   return { props: { home: response?.home, articles: response?.allArticles } };
-// }
+export async function getStaticProps() {
+  const response = await getAllQuestions();
+  return { props: { questions: response?.allQuestions } };
+}
 
-export default function Home({ home, articles }) {
+export default function Home({ questions }) {
   return (
     <>
       <Head>
@@ -91,16 +93,12 @@ export default function Home({ home, articles }) {
             A party game about interesting quiz questions, and even more
             interesting answers, based on the podcast hosted by Tom Scott.
           </p>
-          <button className="bg-black text-white text-sm py-4 px-8 rounded-full font-bold">
-            How to play
-          </button>
+          <Button text="How to play" />
         </header>
         <div className="overflow-y-auto">
-          <div className="px-8 py-6 bg-orange-100 my-0.5">
-            <h3 className="font-bold text-sm truncate">
-              The elevator where you are born again.
-            </h3>
-          </div>
+          {questions.map((question, index) => (
+            <QuestionLink question={question} index={index} key={question.id} />
+          ))}
         </div>
       </main>
     </>
