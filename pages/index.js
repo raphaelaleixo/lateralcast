@@ -98,7 +98,7 @@ export default function Home({ home, articles }) {
         <div className="overflow-y-auto">
           <div className="px-8 py-6 bg-orange-100 my-0.5">
             <h3 className="font-bold text-sm truncate">
-              The elevator where you're "born again".
+              The elevator where you are born again.
             </h3>
           </div>
         </div>
