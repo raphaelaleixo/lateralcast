@@ -40,7 +40,10 @@ export default function Home({ questions }) {
           content="https://lateralcast.vercel.app/social.png"
         />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://lateralcast.vercel.app/" />
+        <meta
+          property="twitter:url"
+          content="https://lateralcast.vercel.app/"
+        />
         <meta property="twitter:title" content="Design Social Club" />
         <meta
           property="twitter:description"
@@ -95,6 +98,17 @@ export default function Home({ questions }) {
             interesting answers, based on the podcast hosted by Tom Scott.
           </p>
           <Button text="How to play" type="nextLink" href="how-to-play" />
+          <p className="text-sm font-medium mt-4">
+            &apos;Lateral&apos; is a co-production of{" "}
+            <a className="underline" href="https://pad26.com/" target="_blank">
+              Pad 26 Limited
+            </a>{" "}
+            and{" "}
+            <a className="underline" href="http://twitter.com/davidjbodycombe/" target="_blank">
+              Labyrinth Games Ltd.
+            </a>{" "}
+            ©Pad 26 Limited/Labyrinth Games Ltd. 2022
+          </p>
         </header>
         <div className="overflow-y-auto">
           {questions.map((question, index) => (
