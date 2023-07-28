@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { MdChevronRight } from "react-icons/md";
 
-export default function DetailView({ title, children }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function DetailView({ title, children, isOpened = false }) {
+  const [isOpen, setIsOpen] = useState(isOpened);
   const [className, setClassName] = useState("max-h-0");
 
   useEffect(() => {

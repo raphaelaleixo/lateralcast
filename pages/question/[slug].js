@@ -127,7 +127,7 @@ export default function Question({ question }) {
                 <ImageZoom image={question.answerImage} />
               ) : null}
             </DetailView>
-            <DetailView title="LateralCast">
+            <DetailView title="LateralCast" isOpened>
               <p className="text-md font-medium">{`Originally appeared on LateralCast ${question.episode}`}</p>
               <div className="flex flex-col gap-2 my-4">
                 <Button
