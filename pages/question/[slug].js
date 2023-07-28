@@ -40,35 +40,35 @@ export default function Question({ question }) {
         <title>Lateral Cast</title>
         <meta name="msapplication-TileColor" content="#2d89ef" />
         <meta name="theme-color" content="#242B53" />
-        <meta name="apple-mobile-web-app-title" content="Design Social Club" />
+        <meta name="apple-mobile-web-app-title" content="Lateral Cast" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta name="application-name" content="Design Social Club" />
+        <meta name="application-name" content="Lateral Cast" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://designsocial.club/" />
-        <meta property="og:title" content="Design Social Club" />
+        <meta property="og:url" content="https://lateralcast.vercel.app/" />
+        <meta property="og:title" content="Lateral Cast" />
         <meta
           property="og:description"
-          content="Vamos juntar designers com projetos reais de impacto social."
+          content="A party game about interesting quiz questions, and even more interesting answers"
         />
         <meta
           property="og:image"
-          content="https://designsocial.club/social.png"
+          content="https://lateralcast.vercel.app/social.png"
         />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://designsocial.club/" />
+        <meta property="twitter:url" content="https://lateralcast.vercel.app/" />
         <meta property="twitter:title" content="Design Social Club" />
         <meta
           property="twitter:description"
-          content="Vamos juntar designers com projetos reais de impacto social."
+          content="A party game about interesting quiz questions, and even more interesting answers"
         />
         <meta
           property="twitter:image"
-          content="https://designsocial.club/social.png"
+          content="https://lateralcast.vercel.app/social.png"
         />
         <meta
           name="description"
-          content="Vamos juntar designers com projetos reais de impacto social."
+          content="A party game about interesting quiz questions, and even more interesting answers"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
