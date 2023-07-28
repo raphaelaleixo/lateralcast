@@ -10,6 +10,7 @@ import { FaSpotify, FaYoutube } from "react-icons/fa";
 import Button from "@/components/Button";
 import Tips from "@/components/Tips";
 import ImageZoom from "@/components/ImageZoom";
+import Layout from "@/components/Layout";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function Question({ question }) {
   const color = findColorByIndex(question.position - 1);
 
   return (
-    <>
+    <Layout>
       <Head>
         <title>Lateral Cast</title>
         <meta name="msapplication-TileColor" content="#2d89ef" />
@@ -147,6 +148,6 @@ export default function Question({ question }) {
           </div>
         </section>
       </main>
-    </>
+    </Layout>
   );
 }

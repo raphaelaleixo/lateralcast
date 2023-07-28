@@ -16,7 +16,7 @@ export default function DetailView({ title, children }) {
   return (
     <div className="border-t px-8 py-6 border-slate-400">
       <div
-        className="flex justify-between items-center"
+        className="flex justify-between items-center cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <h2 className="font-extrabold text-xl">{title}</h2>

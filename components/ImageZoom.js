@@ -8,7 +8,7 @@ export default function ImageZoom({ image }) {
   return (
     <div className="max-w-[10rem] border-4 rounded-md border-black my-4 mx-auto">
       <Image
-        className="aspect-square object-cover border-4 rounded-md border-white"
+        className="aspect-square object-cover border-4 rounded-md border-white cursor-pointer"
         alt={image.alt}
         src={image.url}
         onClick={() => setIsViewerOpen(true)}

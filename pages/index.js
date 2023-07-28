@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Button from "@/components/Button";
 import QuestionLink from "@/components/QuestionLink";
+import Layout from "@/components/Layout";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +19,7 @@ export async function getStaticProps() {
 
 export default function Home({ questions }) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Lateral Cast</title>
         <meta name="msapplication-TileColor" content="#2d89ef" />
@@ -101,6 +102,6 @@ export default function Home({ questions }) {
           ))}
         </div>
       </main>
-    </>
+    </Layout>
   );
 }
