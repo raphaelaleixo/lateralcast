@@ -93,7 +93,7 @@ export default function Question({ question }) {
         <meta name="msapplication-TileColor" content="#242B53" />
       </Head>
       <main
-        className={`${inter.variable} ${color} h-full w-full rounded-2xl font-['Inter'] max-w-xl max-h-full overflow-hidden flex flex-col border-white border-2 relative`}
+        className={`${inter.variable} ${color} h-full w-full font-['Inter'] max-w-xl max-h-full overflow-hidden flex flex-col relative`}
       >
         <Link
           className="z-10 absolute inline-block right-10 top-6 rounded-full bg-white p-2"

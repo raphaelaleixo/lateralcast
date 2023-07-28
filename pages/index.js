@@ -77,7 +77,7 @@ export default function Home({ questions }) {
         <meta name="msapplication-TileColor" content="#242B53" />
       </Head>
       <main
-        className={`${inter.variable} bg-slate-50 h-full w-full rounded-2xl font-['Inter'] max-w-xl max-h-full overflow-hidden flex flex-col border-white border-2`}
+        className={`${inter.variable} bg-slate-50 h-full w-full font-['Inter'] max-w-xl max-h-full overflow-hidden flex flex-col`}
       >
         <header className="p-8 py-12 border-b-slate-400 border-b-2">
           <Image
