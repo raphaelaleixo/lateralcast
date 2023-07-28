@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useMemo } from "react";
 
 const BASE_TAILWIND =
-  "bg-black text-white text-md py-4 px-8 rounded-full font-bold flex justify-between items-center";
+  "bg-black text-white text-md py-4 px-8 rounded-full font-bold justify-between items-center inline-flex gap-4";
 
 export default function Button({ text, icon, type = "button", href, action }) {
   const Component =
@@ -18,6 +18,11 @@ export default function Button({ text, icon, type = "button", href, action }) {
     if (type === "button") {
       return {
         onClick: action,
+      };
+    }
+    if (type === "nextLink") {
+      return {
+        href,
       };
     }
   }, [type, href, action]);

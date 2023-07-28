@@ -3,7 +3,6 @@ import { getAllQuestionSlugs, getQuestionData } from "@/lib/api";
 import Head from "next/head";
 import { findColorByIndex } from "@/lib/findColorByIndex";
 import DetailView from "@/components/DetailView";
-import Image from "next/image";
 import Link from "next/link";
 import { MdClose } from "react-icons/md";
 import { FaSpotify, FaYoutube } from "react-icons/fa";
