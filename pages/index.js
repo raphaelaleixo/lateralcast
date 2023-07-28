@@ -89,7 +89,7 @@ export default function Home({ questions }) {
           <h2 className="uppercase font-black text-xl leading-none mt-1">
             The party game
           </h2>
-          <p className="text-sm font-medium my-4">
+          <p className="text-md font-medium my-4">
             A party game about interesting quiz questions, and even more
             interesting answers, based on the podcast hosted by Tom Scott.
           </p>

@@ -21,6 +21,12 @@ body > div {
   display: contents;
 }
 
+.styles-module_close__2I1sI {
+  color: unset !important;
+  opacity: 1 !important;
+  left: 15px !important;
+}
+
 @media screen and (max-width: 28rem){
    body {
     padding: 1em;

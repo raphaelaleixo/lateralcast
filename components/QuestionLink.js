@@ -9,7 +9,7 @@ export default function QuestionLink({ question, index }) {
       <span className="whitespace-nowrap">
         {question.emoji}
       </span>
-      <h3 className="font-bold text-sm truncate">{question.title}</h3>
+      <h3 className="font-bold text-md">{question.title}</h3>
     </Link>
   );
 }

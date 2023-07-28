@@ -8,6 +8,8 @@ import Link from "next/link";
 import { MdClose } from "react-icons/md";
 import { FaSpotify, FaYoutube } from "react-icons/fa";
 import Button from "@/components/Button";
+import Tips from "@/components/Tips";
+import ImageZoom from "@/components/ImageZoom";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +33,7 @@ export async function getStaticProps({ params }) {
 
 export default function Question({ question }) {
   const color = findColorByIndex(question.position - 1);
+
   return (
     <>
       <Head>
@@ -107,41 +110,25 @@ export default function Question({ question }) {
               </span>
             </h1>
             <div
-              className="font-medium mt-6 text-sm"
+              className="font-medium mt-6 text-md"
               dangerouslySetInnerHTML={{ __html: question.question }}
             />
           </header>
           <div>
             <DetailView title="Hints">
-              <div className="my-2">
-                {question.tips.map((tip) => (
-                  <div
-                    className="p-6 border-4 rounded-md border-black font-bold text-sm"
-                    key={tip.key}
-                  >
-                    {tip.tip}
-                  </div>
-                ))}
-              </div>
-              <div className="text-sm font-medium">{`Tip 1/${question.tips.length}`}</div>
+              <Tips tips={question.tips} />
             </DetailView>
             <DetailView title="Answer">
               <div
-                className="text-sm font-medium"
+                className="text-md font-medium"
                 dangerouslySetInnerHTML={{ __html: question.answer }}
               />
-              <div className="max-w-[10rem] border-4 rounded-md border-black my-4 mx-auto">
-                <Image
-                  className="aspect-square object-cover border-4 rounded-md border-white"
-                  alt={question.answerImage.alt}
-                  src={question.answerImage.url}
-                  height={question.answerImage.height}
-                  width={question.answerImage.width}
-                />
-              </div>
+              {question.answerImage ? (
+                <ImageZoom image={question.answerImage} />
+              ) : null}
             </DetailView>
             <DetailView title="LateralCast">
-              <p className="text-sm font-medium">{`Originally appeared on LateralCast ${question.episode}`}</p>
+              <p className="text-md font-medium">{`Originally appeared on LateralCast ${question.episode}`}</p>
               <div className="flex flex-col gap-2 my-4">
                 <Button
                   text="Listen on Spotify"
@@ -150,7 +137,7 @@ export default function Question({ question }) {
                   icon={<FaSpotify className="text-lg" />}
                 />
                 <Button
-                  text="Watch Highlight on Youtube"
+                  text="Watch Highlight"
                   type="link"
                   href={question.highlights}
                   icon={<FaYoutube className="text-lg" />}
